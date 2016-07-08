@@ -100,8 +100,22 @@
                 }
 
                 return array($min, $max);
-            } else {
+            } elseif (strpos($str, '-') !== false) {
+                $split1 = explode( "-", $str );
+                $split2 = explode( ".", $split1[0] );
+                $split3 = explode( ".", $split1[1] );
 
+                $min = intval($split2[0]) << 24
+                    | intval($split2[1]) << 16
+                    | intval($split2[2]) << 8
+                    | intval($split2[3]);
+
+                $max = intval($split3[0]) << 24
+                    | intval($split3[1]) << 16
+                    | intval($split3[2]) << 8
+                    | intval($split3[3]);
+
+                return array($min, $max);
             }
         }
     }
