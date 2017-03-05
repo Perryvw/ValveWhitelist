@@ -16,7 +16,7 @@
     class ValveWhitelist {
 
         const FILE_NAME = "whitelist.json"; // The file name for the cache
-        const REGIONS_URL = "https://raw.githubusercontent.com/SteamDatabase/GameTracking/master/dota/game/dota/pak01_dir/scripts/regions.txt"; // The URL with an up to date regions.txt
+        const REGIONS_URL = "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/pak01_dir/scripts/regions.txt"; // The URL with an up to date regions.txt
         const UPDATE_INTERVAL = 10800; // Cache file lifetime (in seconds).
 
         private static $ipList;
